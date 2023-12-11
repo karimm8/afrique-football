@@ -1,0 +1,99 @@
+/* heading */
+.heading{
+    margin-bottom: 70px;
+    color: var(--main-color);
+    position: relative;
+    border: 3px solid var(--main-color);
+    width:fit-content;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto 70px;
+    font-size: 32px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Lemon';
+    padding: 0 15px;
+    z-index: 33;
+}
+
+.heading::after{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    content: "";
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: -12%;
+    z-index: -1;
+}
+
+.heading::before{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    content: "";
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    right: -20%;
+    z-index: -1;
+}
+
+.heading:hover{
+    overflow: hidden;
+    animation: anim3 2s ease .5s 1 forwards;
+}
+
+@keyframes anim3 {
+    70%{
+       color: white;
+    }
+    100%{
+       color: white;
+    }
+}
+
+.heading:hover::before{
+    animation: anim 1s ease .5s 1 forwards;
+    color: white;
+}
+
+@keyframes anim{
+    70%{
+        right: -25%;
+        height: 100%;
+        width: 50%;
+        border-radius: 0;
+    }
+    100%{
+        right:-25%;
+        height: 100%;
+        width: 50%;
+        border-radius: 0;
+    }
+}
+
+.heading:hover::after{
+    animation: anim1 1s ease .5s 1 forwards;
+    color: white;
+}
+
+@keyframes anim1{
+    70%{
+        left: 25%;
+        height: 100%;
+        width: 50%;
+        border-radius: 0;
+    }
+
+    100%{
+        left: 25%;
+        height: 100%;
+        width: 50%;
+        border-radius: 0;
+    }
+}
+
